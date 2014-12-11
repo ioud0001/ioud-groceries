@@ -1,0 +1,187 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+  -webkit-tap-highlight-color: transparent;
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */ }
+
+html, body {
+  height: 100%; }
+
+body {
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  background-color: #54ACFF;
+  font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+  width: 100%; }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+/* Portrait layout (default) */
+.app {
+  /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+  position: absolute;
+  /* position in the center of the screen */
+  top: 10%;
+  height: 90%;
+  /* text area height */
+  width: 100%;
+  /* text area width */
+  text-align: center;
+  font-size: large;
+  /*padding:180px 0px 0px 0px;  */
+  /* image height is 200px (bottom 20px are overlapped with text) */
+  /*margin:-115px 0px 0px -112px;*/
+  /* offset vertical: half of image height and text area height */
+  /* offset horizontal: half of text area width */ }
+
+.listview {
+  list-style: none; }
+  .listview li {
+    font-size: 1.2rem;
+    font-family: 'Droid Sans',sans-serif;
+    line-height: 1.5;
+    padding: 0.5rem 2rem;
+    width: 12rem;
+    background-color: #0E73AB;
+    color: white;
+    border-top: 1px solid #FFA793;
+    border-bottom: 1px solid #CC5438; }
+    .listview li .active {
+      background-color: #FFA793; }
+    .listview li .amount {
+      background-color: white;
+      color: #0E73AB;
+      border-radius: 20px;
+      width: 50px;
+      float: right;
+      text-align: center; }
+
+.newadded {
+  background-color: #1079BC;
+  color: white;
+  transition: color 2s linear 2s; }
+
+.message {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out; }
+
+p {
+  padding-left: 10px; }
+
+.message p {
+  text-align: center; }
+
+.output input {
+  background-color: transparent;
+  opacity: 0.5%;
+  border: 1px solid #1079BC; }
+
+.output input:focus {
+  transition: ease-in-out 200ms; }
+
+.output p {
+  text-align: center !important; }
+
+.output {
+  overflow-style: marquee-line; }
+
+input[type=text], input[type=button], button, .output input[type=checkbox] {
+  background-color: #C7E1E8;
+  color: black;
+  border-radius: 30px;
+  text-align: center; }
+
+.output input[type=text] {
+  width: 30px; }
+
+.output > input[type=checkbox]:focus {
+  border: 2px solid #0C57A6;
+  color: #C3C9D4;
+  font-size: 20px; }
+
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 30%;
+  overflow: auto; }
+
+.site-footer {
+  width: inherit;
+  background-color: #A2FAFF;
+  bottom: 0;
+  color: #358A45;
+  position: absolute; }
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1 / 1) and (min-width: 400px) {
+  .app {
+    background-position: left center;
+    padding: 20px 0px 75px 170px;
+    /* padding-top + padding-bottom + text area = image height */
+    margin: 10px 0px 0px -198px;
+    /* offset vertical: half of image height */
+    overflow: auto;
+    width: 80%; }
+
+  input[type=button], input[type=checkbox] {
+    background-color: #11417A;
+    color: #172AA1;
+    border-radius: 30px; } }
+h1 {
+  font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px;
+  overflow: visible;
+  padding: 0px;
+  text-align: center; }
+
+.event {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 12px;
+  margin: 0px 30px;
+  padding: 2px 0px; }
+
+.event.listening {
+  background-color: #333333;
+  display: block; }
+
+.event.received {
+  background-color: #4B946A;
+  display: none; }
+
+/*# sourceMappingURL=index.css.map */
